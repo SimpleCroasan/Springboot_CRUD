@@ -1,6 +1,7 @@
 package page.demo.model;
 
 import jakarta.persistence.*;
+import page.demo.repository.EstadoRepository;
 
 @Entity
 @Table(name = "estado")
