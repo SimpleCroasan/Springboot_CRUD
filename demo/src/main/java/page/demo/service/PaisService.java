@@ -14,22 +14,22 @@ public class PaisService {
     @Autowired
     private PaisRepository paisRepository;
 
-    public List<Pais> lista_paises(){
+    public List<Pais> listaPaises(){
 
         return paisRepository.findAll() ;
     }
 
-    public void borrar_pais(long id){
+    public void borrarPais(long id){
         paisRepository.deleteById(id);
 
     }
 
-    public void guardar_pais(Pais pais){
+    public void guardarPais(Pais pais){
         paisRepository.save(pais);
 
     }
 
-    public Optional<Pais> buscar_pais(long id){
+    public Optional<Pais> buscarPais(long id){
 
         return paisRepository.findById(id);
     }

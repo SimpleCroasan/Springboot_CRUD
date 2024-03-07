@@ -14,24 +14,24 @@ public class PersonaService {
     @Autowired
     private PersonaRepository personaRepository;
 
-    public List<Persona> lista_personas(){
+    public List<Persona> listaPersonas(){
 
         return personaRepository.findAll() ;
     }
 
-    public void borrar_persona(long id){
+    public void borrarPersona(long id){
         personaRepository.deleteById(id);
 
     }
 
-    public Persona guardar_persona(Persona persona){
+    public Persona guardarPersona(Persona persona){
         personaRepository.save(persona);
 
         return persona;
 
     }
 
-    public Optional<Persona> buscar_persona(long id){
+    public Optional<Persona> buscarPersona(long id){
 
         return personaRepository.findById(id);
     }

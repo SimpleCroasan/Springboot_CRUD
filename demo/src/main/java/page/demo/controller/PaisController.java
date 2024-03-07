@@ -22,7 +22,7 @@ public class PaisController {
     private ResponseEntity<List<Pais>> getAllPaises(){
 
 
-        return new ResponseEntity<>(paisService.lista_paises(), HttpStatus.OK);
+        return new ResponseEntity<>(paisService.listaPaises(), HttpStatus.OK);
     }
 
 

@@ -22,7 +22,7 @@ public class PersonaController {
     private ResponseEntity<List<Persona>> getAllPersonas(){
 
 
-        return new ResponseEntity<>(personaService.lista_personas(), HttpStatus.OK);
+        return new ResponseEntity<>(personaService.listaPersonas(), HttpStatus.OK);
     }
 
     @PostMapping("/lista")
@@ -32,7 +32,7 @@ public class PersonaController {
                 return ResponseEntity.badRequest().build();
             }
 
-            Persona personaGuardada = personaService.guardar_persona(persona);
+            Persona personaGuardada = personaService.guardarPersona(persona);
 
             return ResponseEntity.created(new URI("/persona/lista/" + persona.getId())).body(persona);
 

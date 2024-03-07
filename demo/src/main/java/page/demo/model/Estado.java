@@ -18,7 +18,14 @@ public class Estado {
     @Getter
     private String nombre;
 
-    public Estado(String nombre) {
+    @Setter
+    @Getter
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="pais_id")
+    private  Pais pais;
+
+    public Estado(String nombre, Pais pais) {
         this.nombre = nombre;
+        this.pais = pais;
     }
 }
