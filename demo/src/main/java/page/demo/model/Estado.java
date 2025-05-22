@@ -1,5 +1,6 @@
 package page.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import page.demo.repository.EstadoRepository;
@@ -8,6 +9,7 @@ import javax.management.ConstructorParameters;
 
 @Entity
 @Table(name = "estado")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 
 public class Estado {
