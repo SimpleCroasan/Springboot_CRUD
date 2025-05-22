@@ -2118,3 +2118,4 @@ INSERT INTO persona (id, Nombre_Completo, edad, Id_Pais, Id_Estado) VALUES (1997
 INSERT INTO persona (id, Nombre_Completo, edad, Id_Pais, Id_Estado) VALUES (1998, 'Laura 9119', 20, 15, 44);
 INSERT INTO persona (id, Nombre_Completo, edad, Id_Pais, Id_Estado) VALUES (1999, 'Lucía 1932', 20, 10, 30);
 INSERT INTO persona (id, Nombre_Completo, edad, Id_Pais, Id_Estado) VALUES (2000, 'David 5502', 68, 7, 19);
+SELECT setval('persona_id_seq', (SELECT MAX(id) FROM persona));
